@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하이퍼링크 / 블록vs인라인</title>
+</head>
+<body>
+  <h1>하이퍼링크</h1>
+  <hr>
+  <h2>블록레벨과 인라인레벨</h2>
+  <p>네이버</p>
+  <p>구글</p>
+  <p>다음</p>
+  <hr>
+  <a href="https://www.naver.com/">네이버</a>
+  <a href="https://www.google.com/">구글</a>
+  <a href="https://www.daum.net/">다음</a>
+  <hr>
+  <h2>하이퍼링크 a anchor</h2>
+  <Ul>
+    <li>하이퍼링크를 지정할 때</li>
+    <li>href 속성</li>
+    <li><pre>href = "url"</pre></li>
+  </Ul>
+  <h3>하이퍼링크 연습</h3>
+  <!-- <a href="URL">화면에표시될내용</a> -->
+  <a href="https://www.naver.com" title="마우스 호버시 툴팁">네이버1</a>
+  <!-- target 속성값 
+   _self 기본값. 생략시 적용된 속성값 
+   _blank 새탭에서 열기
+   -->
+  <a href="https://www.naver.com" title="마우스 호버시 툴팁" target="_blank">네이버2</a>
+  <hr>
+  <h3>이미지에 하이퍼링크</h3>
+  <a href="https://www.google.com/"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/500px-Google_2015_logo.svg.png" alt="">
+  </a>
+
+  <h3>전화번호에 연결</h3>
+  <p>tel: 프로토콜은 모바일에서만 사용 가능</p>
+  <a href="tel:010-123-4567">010-123-4567</a>
+  
+  <h3>인터넷상의 파일이 아닌 동일 컴(서버) 파일 연결</h3>
+  <a href="상대경로연습.html">상대경로연습</a>
+  <a href="../url연습/상대경로연습2.html">상대경로연습2</a>
+
+</body>
+</html>
