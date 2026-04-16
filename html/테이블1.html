@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<table border="1">
+  <!-- tr*3>td*4>{내용} -->
+   <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+   </tr>
+   <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+   </tr>
+   <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+   </tr>
+</table>
+
+<table border="1" width="100%">
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>가나다 라마바</td>
+    <td>가나다</td>
+    <td>내용</td>
+  </tr>
+</table>
+<hr>
+<p>블록레벨</p>
+<span>가나다</span>
+<hr>
+
+<table border="1">
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+  <tr>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+    <td>내용</td>
+  </tr>
+</table>
+<hr>
+
+<!-- 
+첫번row 표 머리글
+2, 3 표 분문
+마지막row 표 바닥글
+
+머리글 -> 제목데이터 
+2,3,4줄 -> 1칸 제목 2,3,4,5칸 데이터
+-->
+<table border="1">
+  <thead>
+    <!-- tr>th*5>{제목$} -->
+    <tr>
+      <th>제목1</th>
+      <th>제목2</th>
+      <th>제목3</th>
+      <th>제목4</th>
+      <th>제목5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr*2>th+td*4>{내용$@2} -->
+    <tr>
+      <th>제목</th>
+      <td>내용2</td>
+      <td>내용3</td>
+      <td>내용4</td>
+      <td>내용5</td>
+    </tr>
+    <tr>
+      <th>제목</th>
+      <td>내용2</td>
+      <td>내용3</td>
+      <td>내용4</td>
+      <td>내용5</td>
+    </tr>
+    <tr>
+      <th>내용</th>
+      <th>내용</th>
+      <th>내용</th>
+      <th>내용</th>
+      <th>내용</th>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>제목</th>
+      <td>내용2</td>
+      <td>내용3</td>
+      <td>내용4</td>
+      <td>내용5</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
