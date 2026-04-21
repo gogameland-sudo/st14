@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>너비 높이 지정</title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+    .box{
+      background-color: #ccc;
+      margin: 50px 0;
+    }
+    /* 
+    너비- 부모의 contents 영역의 크기 사용
+    높이- 자식의 내용크기 만큼 사용 
+    */
+    .box{
+      /* 너비/높이 고정하고 고정크기 지정*/
+      /* width: 300px;
+      height: 100px; */
+      /* 너비와 높이를 고정하지 않고 최소/최대크기 지정 */
+      /* min-width: none; 기본값 */
+      /* 최소크기 지정 min- */
+      /* 최대크기 지정 max- */
+      min-width: 300px;
+      max-width: 1000px;
+      /* width:auto; 생략시 기본 */
+      /* width는 부모의 상대크기 */
+      width:80%;
+
+      /* 높이는 자식요소의 크기 */
+      /* 높이는 포함내용의 크기만틈 높이
+      높이는 자식으로부터 와요 */
+      /* 자식의 크기가 작을 경우 최소확보 높이 */
+      min-height: 50px;
+      /* 자식의 크기의 상관없이 최대크기 제한 */
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <!-- .box.box$*4>{box$} -->
+  <div class="box box1">box1</div>
+  <div class="box box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non reiciendis expedita iusto quas inventore debitis repudiandae totam maxime ullam corporis, rerum quam blanditiis rem facilis delectus quos tenetur quasi nam! Recusandae excepturi maxime laboriosam ratione soluta provident sed esse.</div>
+  <div class="box box3">box3</div>
+  <div class="box box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, sint nam repellendus tenetur asperiores perferendis iusto laborum eveniet eligendi hic.</div>
+</body>
+</html>
