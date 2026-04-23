@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background-origin</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      height: 300px;
+      border: 10px dashed rgba(255, 102, 0, 0.5);
+      background-color: #ff3;
+      font-size: 2em;
+      text-align: left;
+      color: #f0f;
+      padding: 50px;
+      margin-bottom: 20px;
+
+      background-image: url(images/frame.png);
+      background-repeat: repeat;
+    }
+
+
+    .box1 {
+      width: 500px;
+      background-origin: padding-box;
+    }
+    /* background-position을 지정하지 않고(0 0;) 
+    background-origin은 이미지가 어느부터 기준 */
+    .box2 {
+      width: 80%;
+      background-origin: border-box;
+    }
+    .box3 {
+      width: 10em;
+    }
+    .box4 {
+      width: auto;
+      background-image: url(images/sun.png);
+    }
+  </style>
+  <body>
+    <!-- .container-wrap>.box.box$*4>{box$} -->
+    <div class="container-wrap">
+      <div class="box box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam facilis tempore iusto, voluptatem veniam magni molestias enim maiores voluptatum vero!</div>
+      <div class="box box2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus provident quaerat, optio debitis natus voluptate ut nemo doloribus explicabo sit?</div>
+      <div class="box box3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae commodi, iure nesciunt sunt ullam eaque aspernatur animi dolor officia expedita.</div>
+      <div class="box box4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore cupiditate nobis ipsam suscipit, voluptatibus animi dicta corporis debitis maxime aliquam?</div>
+    </div>
+  </body>
+</html>
