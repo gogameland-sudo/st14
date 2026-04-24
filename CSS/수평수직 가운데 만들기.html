@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수평수직 가운데 만들기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<!-- 
+
+.noto-sans-kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+-->
+
+<style>
+*{margin: 0px; padding: 0; border-box;}
+.exam{
+  /* 브라이저 수평 수직 가득 사용하기 */
+  width: 100%; height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 50%, cyan 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, purple 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, #e7ca0e 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, magenta 0%, transparent 50%);
+  position: relative;
+  background-color: #ccc;
+  /* 4 인라인 .text-wrap 수평정렬 */
+  text-align: center;
+  /* 6 자식의 수직정렬을 가운데*/
+  align-content: center;
+}
+.exam .text-wrap{
+  /* 3 너비를 부모 컨턴츠 크기 만큼만 */
+  display: inline-block;
+}
+.exam .text-wrap .title{
+  /* 1 웹폰트 Nanum Pen Script */
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 200px;
+  color: #fff;
+  text-shadow: 14px 5px 6px rgba(110, 60, 0252, 0.8);
+  /* 2 자간 */
+  letter-spacing: 30px;
+}
+.exam .text-wrap .desc{
+  font-family: "Noto sans kr", sans-serif;
+  font-size: 25px;
+  margin-top: -50px;
+  letter-spacing: 9px;
+  font-weight: 100;
+  color: #fff;
+
+}
+</style>
+
+</head>
+<body>
+  <!-- .exam>.text-wrap>div.title+div.desc -->
+  <div class="exam">
+    <div class="text-wrap">
+      <div class="title">SALE</div>
+      <div class="desc">여름을 전하는 감사 인사</div>
+    </div>
+  </div>
+</body>
+</html>
