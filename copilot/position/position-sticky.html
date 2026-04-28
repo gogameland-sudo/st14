@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position sticky</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .section:nth-child(odd){
+      background-color: #68f;
+    }
+    .section:nth-child(even){
+      background-color: #f86;
+    }
+    .section-title,
+    .content-wrap{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .section{
+      overflow: hidden;
+      /* 부모가 overflow:visible을 제외하고 선언되어 있으면 자식요소는 sticky 작용안됨 */
+    }
+    .section .section-title{
+      background-color: #fff;
+      /* height: 50px; */
+      /* 한줄 텍스트를 수직으로 가운데 오기 */
+      /* line-height: 50px; 높이를 고정 글자 수직 가운데 */
+      font-size: 1.5em;
+      padding: 1em 2em;
+      position: sticky;
+      top: 50px; 
+      /*부모의 요소의 브라우저의 위치가 만나는 지점
+      본인요소가 처음에 위치할 지점*/
+
+    }
+    .section .content-wrap{
+      background-color: beige;
+      height: 110vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap"></div>
+  <!-- .section.setion$*4>p.section-title+.content-wrap -->
+  <div class="section setion1">
+    <p class="section-title">section1</p>
+    <div class="content-wrap"></div>
+  </div>
+  <div class="section setion2">
+    <p class="section-title">section2</p>
+    <div class="content-wrap"></div>
+  </div>
+  <div class="section setion3">
+    <p class="section-title">section3</p>
+    <div class="content-wrap"></div>
+  </div>
+  <div class="section setion4">
+    <p class="section-title">section4</p>
+    <div class="content-wrap"></div>
+  </div>
+</body>
+</html>
