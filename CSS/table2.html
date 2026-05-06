@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table2</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    body{margin: 50px;}
+    table{
+      border: 1px solid #000;
+      margin-bottom: 20px;
+    }
+    table, tr, th, td{
+      box-sizing: border-box;
+    }
+    tr{border: 1px solid #f00;}
+    th, td{border: 1px solid #00f;}
+
+    .table1{
+      table-layout: auto;
+      border-collapse: collapse; 
+      width: 100%;
+    }
+    
+   .table2{
+      table-layout: fixed;
+      border-collapse: collapse 
+      width: 100%;
+      }
+    
+    .table1 th:nth-child(1),
+    .table1 th:nth-child(1){
+      width: 150px;
+    }
+    .table2 th:nth-child(2),
+    .table2 th:nth-child(2){
+      width: 600px;
+    }
+
+      
+
+  </style>
+</head>
+<body>
+  <table class="table1">
+    <!-- tr>th*4>{제목$} -->
+    <tr>
+      <th>제목1</th>
+      <th>제목2</th>
+      <th>제목3</th>
+      <th>제목4</th>
+    </tr>
+    <!-- tr*2>td*4>{내용$} -->
+    <tr>
+      <td>Lorem, ipsum.</td>
+      <td>Lorem, ipsum.</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>내용3</td>
+      <td>내용4</td>
+    </tr>
+    <tr>
+      <td>내용1</td>
+      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cum, voluptas eaque debitis quod culpa quis, ratione nulla eligendi ipsum, illo nobis modi? Unde libero numquam quia aliquid tempore. Dolores laborum debitis fugiat aut placeat quae fuga numquam, sit quasi ipsa nesciunt facere incidunt suscipit aspernatur quia odit pariatur voluptatem eum blanditiis tempore! Officiis aliquid minus, voluptates ea id rem?</td>
+      <td>내용3</td>
+      <td>내용4</td>
+    </tr>
+  </table>
+  <table class="table2">
+    <!-- tr>th*4>{제목$} -->
+    <tr>
+      <th>제목1</th>
+      <th>제목2</th>
+      <th>제목3</th>
+      <th>제목4</th>
+    </tr>
+    <!-- tr*2>td*4>{내용$} -->
+    <tr>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum.</td>
+      <td>내용3</td>
+      <td>내용4</td>
+    </tr>
+    <tr>
+      <td>내용1</td>
+      <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo facilis porro quasi odio necessitatibus tempora assumenda, vero modi ullam consectetur, illum cupiditate ducimus natus quidem repellat consequatur ratione hic sit eaque aut dicta. Praesentium cumque laborum assumenda nostrum provident, vel ut libero eaque, ipsum, mollitia tempore expedita qui laudantium in vero sed. Blanditiis iusto laudantium molestias harum consequatur, nam vitae.</td>
+      <td>내용3</td>
+      <td>내용4</td>
+    </tr>
+  </table>
+</body>
+</html>

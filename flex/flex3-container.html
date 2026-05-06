@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex3-container</title>
+  <link rel="stylesheet" href="../reset.css">
+  <!-- 
+  1. flex 선언
+  2. flex 방향을 결정
+  3. 아이템의 축소/확정을 결정
+  4. 아이템의 크기 결정
+  5. 아이템의 줄바꿈을 결정 
+  6. 여백 관리 gap
+  7. 정렬 container / item , margin
+  -->
+  <style>
+    .wrap{margin: 50px;}
+    .container{
+      background-color: #fcc;
+    }
+    .item{
+      border: 1px solid #000;
+    }
+
+    .flex{
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      /* 전제조건 아이템 확장? 아이템 축소X */
+      /* flex 컨테이너 안에서 flex 아이템의 합이 플렉스 컨테이너보다 클 경우 줄바꿈 
+      flex-direction
+      */
+      flex-wrap: wrap;
+      /* 6 여백 관리 gap container  */
+      column-gap: 1rem ;
+      row-gap: 10ox;
+      /* 7 정렬 */
+      /* 7-1주축의 정렬 */
+      justify-content: start;
+      /* 7-2 교차축의 정렬 */
+      /* 7-2-1 여러줄의 정렬 align-content*/
+      /* 7-2-2 한줄 정렬 align-item */
+      /* 플렉스 컨테이너의 교자축 크기의 맞춰서 늘어나라 */
+      /* align-content: stretch; */
+      align-content: start;
+
+    }
+    .flex .item{
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container flex">
+      <div class="item">item1</div>
+      <div class="item">item2</div>
+      <div class="item">item3</div>
+      <div class="item">item4</div>
+    </div>
+  </div>
+</body>
+</html>
