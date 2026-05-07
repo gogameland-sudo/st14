@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flex3-container</title>
+  <title>flex실습2-양끝정렬</title>
   <link rel="stylesheet" href="../reset.css">
     <!-- 
   1. flex 선언
@@ -18,7 +18,7 @@
     /* 모양 */
     .inner{background-color: #ccc;}
     #top_nav_box{background-color: #fcc; box-sizing: border-box;}
-    #top_nav_box>div{ box-sizing: border-box; padding: 0.5rem;}
+    #top_nav_box>div{box-sizing: border-box; padding: 0.5rem;}
     #top_nav_box .top_logo{background-color: beige;}
     #top_nav_box .top_category{background-color: dodgerblue;}
     #top_nav_box .top_mypage{background-color: purple;}
@@ -29,8 +29,30 @@
     #top_nav_box .top_mypage{width: 150px;} */
 
     /* flex */
-    .inner{}
-    #top_nav_box{}
+    .inner{
+      width: 90%;
+      display: flex;
+      /* 2,5,6 기본 */
+      /* 본인을 가운데에 오게 할때  */
+      margin: 0 auto; 
+    }
+    #top_nav_box{
+      width: 100%;
+      /* 1 플렉스 선언 */
+      display: flex;
+      /* 2 플렉스 아이템들의 방향 설정 flex-direction: row; */
+      /* 5 플렉스 아이템의 줄바꿈 flex-wrap: nowrap (줄바꿈 안함 기본값) */
+      /* 6 플렉스 여백 관리 gap-> container margin -> 아이템 */
+      /* 7 주축(가로) 정렬 */
+      justify-content: space-between;
+      /* 7 교차축(세로) 정렬 */
+
+    }
+    #top_nav_box>div{
+      /* 3 플렉스 아이템 확장 여부 flex-grow: 0; (확장 안함 기본값) */
+      /* 4 플렉스 아이템 축소 여부 flex-shrink: 1; (축소 안함 기본값)*/
+      /* 5 플렉스 아이템 크기 결정 flex-basis: auto; */
+    }
     #top_nav_box .top_logo{}
     #top_nav_box .top_category{}
     #top_nav_box .top_mypage{}
@@ -40,7 +62,6 @@
   <div class="inner">
     <div class="top_nav_box" id="top_nav_box">
       <div class="top_logo">로고</div>
-      <div class="top_category">카테고리</div>
       <div class="top_mypage">마이페이지</div>
     </div>
     <!-- //#top_nav_box -->
